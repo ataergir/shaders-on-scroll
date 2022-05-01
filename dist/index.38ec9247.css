@@ -104,7 +104,7 @@ canvas.webgl {
 }
 
 .section:nth-child(2n) {
-  background: #0000000d;
+  background: #9696960d;
   flex-direction: row-reverse;
 }
 
