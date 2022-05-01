@@ -1,0 +1,195 @@
+.section__button, body {
+  letter-spacing: .1ch;
+  font-family: Neue Haas Display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-weight: 500;
+  line-height: .75;
+}
+
+.scroll__content, .scroll__stage.js-mobile, .layout__line, .scroll__stage, canvas.webgl {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.layout__line, .scroll__stage, canvas.webgl {
+  position: fixed;
+}
+
+.scroll__content, .scroll__stage.js-mobile {
+  position: absolute;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+  color: #fff;
+  background-color: #000;
+  line-height: 1.2;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+canvas.webgl {
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 64em) {
+  canvas.webgl {
+    opacity: .7;
+  }
+}
+
+.scroll__stage {
+  height: 100vh;
+}
+
+.scroll__stage.js-mobile {
+  height: auto;
+}
+
+.scroll__stage.js-mobile .scroll__content {
+  position: relative;
+}
+
+.scroll__content {
+  will-change: transform;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8rem;
+  display: flex;
+}
+
+@media (max-width: 64em) {
+  .section {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10vh 2rem;
+  }
+
+  .section:first-of-type {
+    gap: 0;
+  }
+}
+
+.section:not(:first-of-type) .section__title {
+  padding-bottom: min(9vw, 6rem);
+}
+
+.section:nth-child(2n) {
+  background: #00f;
+  flex-direction: row-reverse;
+}
+
+.section:nth-child(2n) .section__title {
+  text-align: right;
+}
+
+@media (max-width: 64em) {
+  .section:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .section:nth-child(2n) .section__paragraph {
+    align-self: flex-start;
+  }
+}
+
+.section__title {
+  text-align: left;
+  opacity: .9;
+}
+
+@media (max-width: 64em) {
+  .section__title {
+    width: 100%;
+  }
+}
+
+.section__title-number {
+  font-size: min(36vw, 24rem);
+}
+
+.section__title-text {
+  padding-left: .1ch;
+  font-size: min(18vw, 12rem);
+}
+
+.section__title-arrow {
+  color: #00f;
+  margin-top: 1ch;
+  font-size: min(9vw, 6rem);
+  line-height: 1;
+}
+
+.section__title-arrow span {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.section__paragraph {
+  max-width: 20ch;
+  align-self: flex-end;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 64em) {
+  .section__paragraph {
+    font-size: 1.2rem;
+  }
+}
+
+.section__button {
+  letter-spacing: .1ch;
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 50%;
+  margin: 5ch 0;
+  padding: 2ch 5ch;
+  font-size: .8em;
+  transition: background-color 1s, color 1s, border 1s;
+  display: inline-block;
+}
+
+.section__button:hover, .section__button:focus {
+  color: #ff0;
+  border: 2px solid #ff0;
+}
+
+.layout__line {
+  height: 5px;
+  width: 100%;
+  mix-blend-mode: difference;
+  background-color: #0000ff4d;
+  transform: scaleX(0);
+}
+
+.layout__faboolea {
+  height: .5rem;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 3rem;
+}
+
+/*# sourceMappingURL=index.ea6ffa38.css.map */
